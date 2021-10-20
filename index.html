@@ -1,107 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Overview</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
 
-</head>
-<body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MY LifeStyle</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="HomePage1.css">
+    </head>
+    <body class="homepageBody" style="text-align:right">
 
-  <div class="topTitle">
-    <h1>My LifeStyle</h1>
-  </div>
+        <div class="title">
+            <h1> LOG YOUR DAY!</h1>
+            <h3>How was your day today? Kept track of your LifeStyle today!</h3> 
+        </div> 
 
-  <div class="container">
-
-    <header>
-      <div class="dropdown">
-        <button class="dropbtn">My Days</button>
-        <div class="dropdown-info">
-        <a href="mood.html">Mood</a>
-        <a href="Exercise.html">Exercise</a>
-        <a href="calories.html">Calories</a>
-        <a href="timeWokeUp.html">Time Woken Up</a>
-        </div>
-      </div>
-    </header>
-    <div class="table-wrapper">
-      <table class="table-users">
+        <button class="btn2 Overview" onclick="window.location ='index.html';" style="vertical-align:middle"><span>Overview</span></button>
+        <button class="btn2 timeWokeUp" onclick="window.location ='timeWokeUp.html';" style="vertical-align:middle"><span>Time Woken Up</span></button>
+        <button class="btn2 mood" onclick="window.location ='mood.html';" style="vertical-align:middle" ><span>Mood</span></button>
+        <button class="btn2 Exercise" onclick="window.location ='Exercise.html';"style="vertical-align:middle"><span>Exercise</span></button>
+        <button class="btn2 calories" onclick="window.location ='calories.html';"style="vertical-align:middle"><span>Calories</span></button>
+        <button  id="btn-add-action" class="btn2 addDay  btn-add2" style="vertical-align:middle" ><span>ADD DAY</span></button>
+        <div class="homepage"></div>
         
-        <tr>
-          <th>Date</th>
-          <th>Day of Week</th>
-          <th>Time Woke Up</th>
-          <th>Mood</th>
-          <th>Calories</th>
-          <th>Hours of Exercise</th>
-          <th>Action</th>
-
-        </tr>
-      </table>
-      <button class="btn btn-add">Add Day</button>
-    </div>
-    <!-- Add Modal -->
-    <div class="add-modal modal-wrapper">
-      <div class="modal">
-        <div class="modal-header"><h3>Add New Day</h3></div>
-        <div class="modal-body">
-          <form class="form" autocomplete="off">
-            <input type="text" name="date" placeholder="Date">
-            <input type="text" name="day" placeholder="Day of Week">
-            <input type="text" name="timeWokeUp" placeholder="Time Woke Up">
-            <input type="text" name="mood" placeholder="Mood">
-            <input type="text" name="calories" placeholder="Calories">
-            <input type="text" name="hoursOfExercise" placeholder="Hours of Exercise">
-            <button class="btn btn-modal">Submit</button>
-          </form>
+        <div class="add-modal modal-wrapper">
+            <div class="modal">
+              <div class="modal-header"><h3>Add New Day</h3></div>
+              <div class="modal-body">
+                <form class="form" autocomplete="off">
+                  <input type="text" name="date" placeholder="Date">
+                  <input type="text" name="day" placeholder="Day of Week">
+                  <input type="text" name="timeWokeUp" placeholder="Time Woke Up">
+                  <input type="text" name="mood" placeholder="Mood">
+                  <input type="text" name="calories" placeholder="Calories">
+                  <input type="text" name="hoursOfExercise" placeholder="Hours of Exercise">
+                  <button class="btn btn-modal">Submit</button>
+                </form>
+              </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Edit Modal -->
-    <div class="edit-modal modal-wrapper">
-      <div class="modal">
-        <div class="modal-header"><h3>Edit Day</h3></div>
-        <div class="modal-body">
-          <form class="form" autocomplete="off">
-            <input type="text" name="date" placeholder="Date">
-            <input type="text" name="day" placeholder="Day of Week">
-            <input type="text" name="timeWokeUp" placeholder="Time Woke Up">
-            <input type="text" name="mood" placeholder="Mood">
-            <input type="text" name="calories" placeholder="Calories">
-            <input type="text" name="hoursOfExercise" placeholder="Hours of Exercise">
-            <button class="btn btn-modal">Submit</button>
-          </form>
+        <div class="popup" onclick="myFunction()">Need Help ?
+          <span class="popuptext" id="myPopup">To add your new day click the "Add Day" button and full out your daily life!
+              Use the Overview Button to Edit and look at previous days! Use the Category Buttons to sort your days by category.
+          </span>
         </div>
-      </div>
-    </div>
-  </div>
+        <script>
+
+const modalWrapper = document.querySelector('.modal-wrapper');
+
+// modal add
+const addModal = document.querySelector('.add-modal');
+
+const addModalForm = document.querySelector('.add-modal .form');
+
+// modal edit
 
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+const btnAdd = document.querySelector('#btn-add-action');
+            btnAdd.addEventListener('click', () => {
+  addModal.classList.add('modal-show');
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
-    
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDlIbCKnvYyEP3ECbEgSRD3EfY2_x4FNe0",
-        authDomain: "database-4d215.firebaseapp.com",
-        projectId: "database-4d215",
-        storageBucket: "database-4d215.appspot.com",
-        messagingSenderId: "250491179919",
-        appId: "1:250491179919:web:0198d2649c23eafe9bb1fa"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-    </script>
-            <script src="index.js" async defer></script>
-    
+  addModalForm.date.value = '';
+  addModalForm.timeWokeUp.value = '';
+  addModalForm.mood.value = '';
+  addModalForm.calories.value = '';
+  addModalForm.hoursOfExercise.value = '';
+});
+
+
+// User click anyware outside the modal
+// If e.target is equal too addModal we need to remove the modal show class - this means when you click outside the modal it will disapear
+window.addEventListener('click', e => {
+  if(e.target === addModal) {
+    addModal.classList.remove('modal-show');
+  }
+  if(e.target === editModal) {
+    editModal.classList.remove('modal-show');
+  }
+});
+
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+        </script>
     </body>
 </html>
