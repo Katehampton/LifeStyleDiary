@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="overview.css">
+
+</head>
+<body>
+
+  <div class="topTitle">
+    <h1>My LifeStyle</h1>
+  </div>
+
+  <div class="container">
+
+    <header>
+      <div class="dropdown">
+        <button class="dropbtn">My Days</button>
+        <div class="dropdown-info">
+        <a href="mood.html">Mood</a>
+        <a href="Exercise.html">Exercise</a>
+        <a href="calories.html">Calories</a>
+        <a href="timeWokeUp.html">Time Woken Up</a>
+        </div>
+      </div>
+    </header>
+    <div class="table-wrapper">
+      <table class="table-users">
+        
+        <tr>
+          <th>Date</th>
+          <th>Day of Week</th>
+          <th>Time Woke Up</th>
+          <th>Mood</th>
+          <th>Calories</th>
+          <th>Hours of Exercise</th>
+          <th>Action</th>
+
+        </tr>
+      </table>
+      <button class="btn btn-add">Add Day</button>
+    </div>
+    <!-- Add Modal -->
+    <div class="add-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Add New Day</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="date" placeholder="Date">
+            <input type="text" name="day" placeholder="Day of Week">
+            <input type="text" name="timeWokeUp" placeholder="Time Woke Up">
+            <input type="text" name="mood" placeholder="Mood">
+            <input type="text" name="calories" placeholder="Calories">
+            <input type="text" name="hoursOfExercise" placeholder="Hours of Exercise">
+            <button class="btn btn-modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="edit-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Edit Day</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="date" placeholder="Date">
+            <input type="text" name="day" placeholder="Day of Week">
+            <input type="text" name="timeWokeUp" placeholder="Time Woke Up">
+            <input type="text" name="mood" placeholder="Mood">
+            <input type="text" name="calories" placeholder="Calories">
+            <input type="text" name="hoursOfExercise" placeholder="Hours of Exercise">
+            <button class="btn btn-modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDlIbCKnvYyEP3ECbEgSRD3EfY2_x4FNe0",
+        authDomain: "database-4d215.firebaseapp.com",
+        projectId: "database-4d215",
+        storageBucket: "database-4d215.appspot.com",
+        messagingSenderId: "250491179919",
+        appId: "1:250491179919:web:0198d2649c23eafe9bb1fa"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+            <script src="index.js" async defer></script>
+    
+    </body>
+</html>
