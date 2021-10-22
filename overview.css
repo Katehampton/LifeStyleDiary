@@ -17,12 +17,14 @@ body {
   background-color: #B0DFE3;
 }
 
-.topTitle {
+.topTitle h1{
   text-align: center;
   color: rgb(245, 249, 252);
-  padding-top: 2%;
-  font-size: 35px;
+  margin-top: 3%;
+  font-size: 70px;
 }
+
+
 .container {
   max-width: 65rem;
   margin: 2rem auto;
@@ -36,7 +38,7 @@ body {
 header {
   width: 100%;
   background: #7d98a1;
-  padding: 1rem;
+  padding: .5rem;
   color: #fff;
 }
 
@@ -45,6 +47,7 @@ header {
   color: black;
   font-size: 25px;
   border: none;
+  font-weight: bolder;
 }
 
 .dropdown {
