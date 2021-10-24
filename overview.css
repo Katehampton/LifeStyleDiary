@@ -17,13 +17,20 @@ body {
   background-color: #B0DFE3;
 }
 
-.topTitle h1{
-  text-align: center;
-  color: rgb(245, 249, 252);
+
+.topTitle{
+  left: 1.5%;
   margin-top: 3%;
-  font-size: 70px;
+  font-size: 45px;
+}
+.topTitle h1{
+  text-decoration: none;
+  color: aliceblue;
 }
 
+.topTitle a:link {
+  text-decoration: none;
+}
 
 .container {
   max-width: 65rem;
@@ -55,7 +62,7 @@ header {
   margin-left:1.7rem;
   margin-bottom: 0.8px;
   margin-top: 15px;
-  width:11rem;
+  width:15rem;
 }
 
 .dropdown-info {
