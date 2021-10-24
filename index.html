@@ -20,7 +20,7 @@
         <button class="btn2 timeWokeUp" onclick="window.location ='timeWokeUp.html';" style="vertical-align:middle"><span>Time Woken Up</span></button>
         <button class="btn2 mood" onclick="window.location ='mood.html';" style="vertical-align:middle" ><span>Mood</span></button>
         <button class="btn2 Exercise" onclick="window.location ='Exercise.html';"style="vertical-align:middle"><span>Exercise</span></button>
-        <button class="btn2 calories" onclick="window.location ='calories.html';"style="vertical-align:middle"><span>Calories</span></button>
+        <button class="btn2 work" onclick="window.location ='work.html';"style="vertical-align:middle"><span>Work / Study</span></button>
         <button  id="btn-add-action" class="btn2 addDay  btn-add2" style="vertical-align:middle" ><span>ADD DAY</span></button>
         <div class="homepage"></div>
         
@@ -33,7 +33,7 @@
                   <input type="text" name="day" placeholder="Day of Week">
                   <input type="text" name="timeWokeUp" placeholder="Time Woke Up">
                   <input type="text" name="mood" placeholder="Mood">
-                  <input type="text" name="calories" placeholder="Calories">
+                  <input type="text" name="work" placeholder="Work / Study">
                   <input type="text" name="hoursOfExercise" placeholder="Hours of Exercise">
                   <button class="btn btn-modal">Submit</button>
                 </form>
@@ -63,9 +63,10 @@ const btnAdd = document.querySelector('#btn-add-action');
   addModal.classList.add('modal-show');
 
   addModalForm.date.value = '';
+  addModalForm.day.value = '';
   addModalForm.timeWokeUp.value = '';
   addModalForm.mood.value = '';
-  addModalForm.calories.value = '';
+  addModalForm.work.value = '';
   addModalForm.hoursOfExercise.value = '';
 });
 

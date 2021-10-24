@@ -26,7 +26,7 @@ const renderUser = doc => {
       <td>${doc.data().day}</td>
       <td>${doc.data().timeWokeUp}</td>
       <td>${doc.data().mood}</td>
-      <td>${doc.data().calories}</td>
+      <td>${doc.data().work}</td>
       <td>${doc.data().hoursOfExercise}</td>
       <td>
         <button class="btn btn-edit">Edit</button>
@@ -46,7 +46,7 @@ const renderUser = doc => {
     editModalForm.day.value = doc.data().day;
     editModalForm.timeWokeUp.value = doc.data().timeWokeUp;
     editModalForm.mood.value = doc.data().mood;
-    editModalForm.calories.value = doc.data().calories;
+    editModalForm.work.value = doc.data().work;
     editModalForm.hoursOfExercise.value = doc.data().hoursOfExercise;
 
   });
@@ -70,7 +70,7 @@ const renderUser3 = doc => {
       <td>${doc.data().day}</td>
       <td>${doc.data().timeWokeUp}</td>
       <td>${doc.data().mood}</td>
-      <td>${doc.data().calories}</td>
+      <td>${doc.data().work}</td>
       <td>${doc.data().hoursOfExercise}</td>
     </tr>
   `;
@@ -89,7 +89,7 @@ btnAdd.addEventListener('click', () => {
   addModalForm.day.value = '';
   addModalForm.timeWokeUp.value = '';
   addModalForm.mood.value = '';
-  addModalForm.calories.value = '';
+  addModalForm.work.value = '';
   addModalForm.hoursOfExercise.value = '';
 });
 
@@ -106,13 +106,6 @@ window.addEventListener('click', e => {
 });
 
 
-
-// Get all users
-// db.collection('users').get().then(querySnapshot => {
-//   querySnapshot.forEach(doc => {
-//     renderUser(doc);
-//   })
-// });
 
 // Real time listener
 db.collection('lifeStyle').onSnapshot(snapshot => {
@@ -163,7 +156,7 @@ addModalForm.addEventListener('submit', e => {
     day: addModalForm.day.value,
     timeWokeUp: addModalForm.timeWokeUp.value,
     mood: addModalForm.mood.value,
-    calories: addModalForm.calories.value,
+    work: addModalForm.work.value,
     hoursOfExercise: addModalForm.hoursOfExercise.value,
   });
   modalWrapper.classList.remove('modal-show');
@@ -177,7 +170,7 @@ editModalForm.addEventListener('submit', e => {
     day: editModalForm.day.value,
     timeWokeUp: editModalForm.timeWokeUp.value,
     mood: editModalForm.mood.value,
-    calories: editModalForm.calories.value,
+    work: editModalForm.work.value,
     hoursOfExercise: editModalForm.hoursOfExercise.value,
   });
   editModal.classList.remove('modal-show');
