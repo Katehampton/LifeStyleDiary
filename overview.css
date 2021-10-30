@@ -205,6 +205,11 @@ header {
   color: #fff;
   width: 9rem;
 }
+.btn-modal:hover {
+  background: #658392d7;
+  color: #fff;
+
+}
 
 input {
   width: 100%;
