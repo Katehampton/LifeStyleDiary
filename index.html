@@ -79,7 +79,7 @@ const addModalForm = document.querySelector('.add-modal .form');
 
 // modal edit
 
-const renderUser3 = doc => {
+const renderUser = doc => {
   const tr = `
     <tr data-id='${doc.id}'>
       <td>${doc.data().date}</td>
@@ -109,25 +109,6 @@ const btnAdd = document.querySelector('#btn-add-action');
 
 
 
-// Real time listener
-db.collection('lifeStyle').onSnapshot(snapshot => {
-  snapshot.docChanges().forEach(change => {
-    if(change.type === 'added') {
-      renderUser(change.doc);
-    }
-    if(change.type === 'removed') {
-      let tr = document.querySelector(`[data-id='${change.doc.id}']`);
-      let tbody = tr.parentElement;
-      tableUsers2.removeChild(tbody);
-    }
-    if(change.type === 'modified') {
-      let tr = document.querySelector(`[data-id='${change.doc.id}']`);
-      let tbody = tr.parentElement;
-      tableUsers2.removeChild(tbody);
-      renderUser(change.doc);
-    }
-  })
-})
 
 // Click submit in add modal
 addModalForm.addEventListener('submit', e => {

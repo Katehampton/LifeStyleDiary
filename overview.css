@@ -81,11 +81,11 @@ header {
   display: block;
 }
 
-.dropdown-info a:hover {background-color: #B0DFE3;}
+.dropdown-info a:hover {background-color: #B0DFE3; transition: 0.5s;}
 
 .dropdown:hover .dropdown-info {display: block;}
 
-.dropdown:hover .dropbtn {color:rgb(255, 255, 255);}
+.dropdown:hover .dropbtn {color:rgb(255, 255, 255); transition: 0.5s;}
 
 
 .table-users {
@@ -145,6 +145,13 @@ header {
   width: 6rem;
   height: 2rem;
   background: #7d98a1;
+  border: none;
+  color: #fff;
+}
+.btn-add:hover {
+  width: 6rem;
+  height: 2rem;
+  background: #465458;
   border: none;
   color: #fff;
 }
