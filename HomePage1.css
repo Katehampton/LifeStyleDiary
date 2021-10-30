@@ -18,7 +18,7 @@ body {
 
 
 .homepageBody {
-  background-color: #a4d0db;
+  background-color: #a1c9d3;
 }
 
 .title {
@@ -76,7 +76,7 @@ body {
 }
 
 .Overview {
-  background-color: #BCFB9D;
+  background-color: #b6ff92;
   position: absolute;
   top: 30%;
   left: 37.5%;
@@ -84,7 +84,7 @@ body {
 }
 
 .addDay {
-  background-color: #FFEE99;
+  background-color: #ffed92;
   position: absolute;
   top: 30%;
   left: 62.5%;
@@ -171,7 +171,7 @@ header h3 {
   height: 100%;
   left: 0;
   top: 0;
-  background: #8bdda09a;
+  background: #e2cbeb67;
   display: none;
 }
 
