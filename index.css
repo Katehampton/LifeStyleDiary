@@ -99,9 +99,7 @@ body {
 }
 
 
-.topTitle:hover {
-  color: aquamarine;
-}
+
 
 
 /* Modal */
@@ -111,7 +109,7 @@ body {
   height: 100%;
   left: 0;
   top: 0;
-  background: #24232354;
+  background: #e7bef786;
   display: none;
 }
 
@@ -152,10 +150,13 @@ body {
 }
 
 .btn-modal {
-  background: var(--primary-color);
-  border: none;
+  color: black; 
+  border: 2px solid #52bcf1d7;
+  width: 11rem;
+}
+.btn-modal:hover {
+  background: #52bcf1d7;
   color: #fff;
-  width: 9rem;
 }
 
 .modal-show {

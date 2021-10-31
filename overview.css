@@ -164,7 +164,7 @@ header {
   height: 100%;
   left: 0;
   top: 0;
-  background: #e2cbeb70;
+  background: #e7bef786;
   display: none;
 }
 .table-wrapper h3 {
@@ -208,15 +208,13 @@ header {
 }
 
 .btn-modal {
-  background: #93c9e4d7;
-  border: none;
-  color: #fff;
-  width: 9rem;
+  color: black; 
+  border: 2px solid #52bcf1d7;
+  width: 11rem;
 }
 .btn-modal:hover {
-  background: #658392d7;
+  background: #52bcf1d7;
   color: #fff;
-
 }
 
 input {

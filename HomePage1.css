@@ -130,23 +130,7 @@ header h3 {
   margin-left: 1.5rem;
 }
 
-.table-users {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-}
 
-.table-users th, .table-users td {
-  text-align: left;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: .5rem;
-}
-
-.table-users th {
-  background: #fafafa;
-  padding: 1rem auto;
-}
 
 .btn {
   background: transparent;
@@ -171,7 +155,7 @@ header h3 {
   height: 100%;
   left: 0;
   top: 0;
-  background: #e2cbeb67;
+  background: #e7bef786;
   display: none;
 }
 
@@ -212,16 +196,13 @@ header h3 {
 }
 
 .btn-modal {
-  background: #93c9e4d7;
-  border: none;
-  color: rgb(0, 0, 0);
-  width: 9rem;
-  font-size: medium;
+  color: black; 
+  border: 2px solid #52bcf1d7;
+  width: 11rem;
 }
 .btn-modal:hover {
-  background: #658392d7;
+  background: #52bcf1d7;
   color: #fff;
-
 }
 
 input {
