@@ -23,7 +23,6 @@ body {
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 20%;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -56,19 +55,13 @@ body {
 
 .Overview {
   background-color: #BCFB9D;
+  padding: 40px;
   position: absolute;
   top: 30%;
   left: 37.5%;
   transform: translate(-50%,-50%)
 }
 
-.addDay {
-  background-color: #FFEE99;
-  position: absolute;
-  top: 30%;
-  left: 62.5%;
-  transform: translate(-50%,-50%)
-}
 
 .mood {
   position: absolute;

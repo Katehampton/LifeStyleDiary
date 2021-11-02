@@ -76,45 +76,39 @@ body {
 }
 
 .Overview {
+  width: 45%;
   background-color: #b6ff92;
   position: absolute;
-  top: 30%;
-  left: 37.5%;
+  top: 65%;
+  left: 50%;
   transform: translate(-50%,-50%)
 }
 
-.addDay {
-  background-color: #ffed92;
-  position: absolute;
-  top: 30%;
-  left: 62.5%;
-  transform: translate(-50%,-50%)
-}
 
 .mood {
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 37.5%;
   transform: translate(-50%,-50%)
 }
 
 .Exercise {
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 62.5%;
   transform: translate(-50%,-50%)
 }
 
 .work {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 37.5%;
   transform: translate(-50%,-50%)
 }
 
 .timeWokeUp {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 62.5%;
   transform: translate(-50%,-50%)
 }

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <header>
       <div class="dropdown">
-        <button class="dropbtn"><i class="fa fa-chevron-circle-down" style="font-size: 20px;"></i> My Monrnings</button>
+        <button class="dropbtn"><i class="fa fa-chevron-circle-down" style="font-size: 20px;"></i> My Mornings</button>
         <div class="dropdown-info">
         <a href="mood.html">Mood</a>
         <a href="Exercise.html">Exercise</a>
@@ -38,7 +38,6 @@
     </div>
 
     
-
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
@@ -60,9 +59,8 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       const db = firebase.firestore();
-
-      const tableUsers2 = document.querySelector('.table-users');
-
+  
+      const tableUsers = document.querySelector('.table-users');
 
 let id;
 
@@ -75,13 +73,13 @@ const renderUser = doc => {
       <td>${doc.data().timeWokeUp}</td>
     </tr>
   `;
-  tableUsers2.insertAdjacentHTML('beforeend', tr);
+  tableUsers.insertAdjacentHTML('beforeend', tr);
 
 
 }
 
 // Get all users
- db.collection('lifeStyle').get().then(querySnapshot => {
+ db.collection('users').get().then(querySnapshot => {
    querySnapshot.forEach(doc => {
      renderUser(doc);
    })

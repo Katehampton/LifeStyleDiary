@@ -44,13 +44,12 @@ const renderUser = doc => {
     editModalForm.work.value = doc.data().work;
     editModalForm.hoursOfExercise.value = doc.data().hoursOfExercise;
 
-
   });
 
   // Click delete user
   const btnDelete = document.querySelector(`[data-id='${doc.id}'] .btn-delete`);
   btnDelete.addEventListener('click', () => {
-    db.collection('lifeStyle').doc(`${doc.id}`).delete().then(() => {
+    db.collection('users').doc(`${doc.id}`).delete().then(() => {
       console.log('Document succesfully deleted!');
     }).catch(err => {
       console.log('Error removing document', err);
@@ -90,7 +89,7 @@ window.addEventListener('click', e => {
 // });
 
 // Real time listener
-db.collection('lifeStyle').onSnapshot(snapshot => {
+db.collection('users').onSnapshot(snapshot => {
   snapshot.docChanges().forEach(change => {
     if(change.type === 'added') {
       renderUser(change.doc);
@@ -112,7 +111,7 @@ db.collection('lifeStyle').onSnapshot(snapshot => {
 // Click submit in add modal
 addModalForm.addEventListener('submit', e => {
   e.preventDefault();
-  db.collection('lifeStyle').add({
+  db.collection('users').add({
     date: addModalForm.date.value,
     day: addModalForm.day.value,
     timeWokeUp: addModalForm.timeWokeUp.value,
@@ -126,13 +125,13 @@ addModalForm.addEventListener('submit', e => {
 // Click submit in edit modal
 editModalForm.addEventListener('submit', e => {
   e.preventDefault();
-  db.collection('lifeStyle').doc(id).update({
-    date: addModalForm.date.value,
-    day: addModalForm.day.value,
-    timeWokeUp: addModalForm.timeWokeUp.value,
-    mood: addModalForm.mood.value,
-    work: addModalForm.work.value,
-    hoursOfExercise: addModalForm.hoursOfExercise.value,
+  db.collection('users').doc(id).update({
+    date: editModalForm.date.value,
+    day: editModalForm.day.value,
+    timeWokeUp: editModalForm.timeWokeUp.value,
+    mood: editModalForm.mood.value,
+    work: editModalForm.work.value,
+    hoursOfExercise: editModalForm.hoursOfExercise.value,
   });
   editModal.classList.remove('modal-show');
   

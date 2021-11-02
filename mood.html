@@ -60,7 +60,8 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       const db = firebase.firestore();
-      const tableUsers2 = document.querySelector('.table-users');
+  
+      const tableUsers = document.querySelector('.table-users');
 
 
 let id;
@@ -74,13 +75,13 @@ const renderUser = doc => {
       <td>${doc.data().mood}</td>
     </tr>
   `;
-  tableUsers2.insertAdjacentHTML('beforeend', tr);
+  tableUsers.insertAdjacentHTML('beforeend', tr);
 
 
 }
 
 // Get all users
- db.collection('lifeStyle').get().then(querySnapshot => {
+ db.collection('users').get().then(querySnapshot => {
    querySnapshot.forEach(doc => {
      renderUser(doc);
    })
@@ -88,6 +89,6 @@ const renderUser = doc => {
 
 
     </script>
-          <script src="mood.js" async defer></script>
+
     </body>
 </html>
