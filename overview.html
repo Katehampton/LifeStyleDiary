@@ -8,6 +8,13 @@
 </head>
 <body>
   <body>
+    <div class="popup" onclick="myFunction()">Need Help?
+      <span class="popuptext" id="myPopup">  
+        To Return Home: Click on the "My LifeStyle"
+        To Broswe Data: Use the dropdown, when hovering over the "My Days"
+        To Add Day: Click on "Add Day" button on the bottom of the table
+      </span>
+    </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="topTitle">
       <a href="index.html">
@@ -81,6 +88,8 @@
         </div>
       </div>
     </div>
+    
+
   
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -103,6 +112,12 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
+
+  
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
 </script>
 
 <script src="index.js"></script>
